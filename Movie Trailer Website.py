@@ -3,9 +3,7 @@ import fresh_tomatoes
 
 class Movies():
     
-    """this is the definition of Class Movies. it takes parameters title,
-    storyline, poster image and trailer link of a movie. also a method 
-    'show_trailer is defined that shows the trailer of the movie"""
+    #define Class Movies
     
     def __init__(self,movie_title,movie_storyline, poster_image,trailer_youtube):
         
@@ -18,10 +16,9 @@ class Movies():
         webbrowser.open(self.trailer_youtube_url)
         
     
-"""Now here we are creating different instances of the movies 
-that will hold data of different movies"""
 
-  
+#Create instances of the movies
+ 
 social_network= Movies(" The Social Network", " This is the story of the Marks Jukarbergs and the facebook",
 "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Social_network_film_poster.jpg/220px-Social_network_film_poster.jpg"
 ,"https://www.youtube.com/watch?v=2RB3edZyeYw")
@@ -44,15 +41,12 @@ imitation_game= Movies("The Imitation Game", "The story of Alan Turing",
 "https://www.youtube.com/watch?v=S5CjKEFb-sM") 
 
 
-""" Here we are creating list of the different movie 
-object by naming it movie_collection!"""
+#Creating list "movie_collection" 
    
 movies_collection=[social_network,pirates_of_siliconvalley,jobs,
                   artificial_intelligence,algorithms, imitation_game]
 
 
-""" the code below is accessing the fuction'open_movies_page' defined in python
-file fresh_tomatoes. fresh_tomatoes.py takes list of movies as input and outputs 
-a website show poster of all movies having links to their trailers """
+#accessing the fuction'open_movies_page' defined in python file fresh_tomatoes
   
 fresh_tomatoes.open_movies_page(movies_collection)
